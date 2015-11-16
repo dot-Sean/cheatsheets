@@ -36,3 +36,44 @@ df -h
 du -sh *
 ```
 
+### DNS Lookup
+
+```bash
+dig winterbe.com +nostats +nocomments +nocmd
+```
+
+### Flush DNS Cache
+
+```bash
+dscacheutil -flushcache
+```
+
+### Convert MOV to MP4
+
+```bash
+ffmpeg -i myfile.mov -vcodec h264 myfile.mp4
+```
+
+### Grep Java type usage
+
+```bash
+grep -or "com\.company\.project.\+" * | grep -o ":[a-zA-Z0-9\.]\+" | sort | uniq
+```
+
+### Text to speech
+
+```bash
+echo woot | say -v Albert
+```
+
+### Pipe stdout and sterr to file
+
+```bash
+some_command > everything.txt 2>&1
+```
+
+### Java Thread Dumps
+
+```bash
+sudo jstack -F $PID > threads.log
+```
